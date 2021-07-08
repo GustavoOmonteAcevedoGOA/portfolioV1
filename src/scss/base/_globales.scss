@@ -9,34 +9,47 @@ html {
 }
 body {
   font-family: $fuente_principal;
-  font-size: 1.8rem;
-  font-weight: $medium;
-  line-height: 2.194rem;
-  background-color: $bodyBackground;
-}
-p {
-  color: $plomo;
   font-size: 1.6rem;
   font-weight: $medium;
-  line-height: 1.95rem;
-  margin: 0 0;
+  line-height: 2.194rem;
+  background: linear-gradient(90deg, $bodyBackground1 0%, $bodyBackground2 100%);
 }
+
+
 .container {
   width: 95%;
   max-width: 144rem;
   margin: 0 auto;
-  @include tablet{
-      width: 100%;
-  }  
+  position: relative;
+  @include tablet {
+    width: 100%;
+  }
+}
+.glass {
+  background: $glasscolor;
+  opacity: 0.1;
+  box-shadow: 15px 15px 10px 10px #000000;
+  border-radius: 12px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 a {
   text-decoration: none;
+}
+
+button{
+  padding: 1.6rem 6.6rem;
+  background: linear-gradient(90deg, #FFB75E 0%, #E6A038 100%);
+  border-radius: 1.4rem;
+  border: none;
 }
 .card {
   padding: 1.7rem 2.2rem;
   background-color: $blanco;
   border-radius: 1.2rem;
-  margin-bottom: $separacion;  
+  margin-bottom: $separacion;
   &.card-title {
     margin-bottom: 1.6rem;
   }
@@ -56,40 +69,7 @@ h5 {
   margin: 0;
   overflow-wrap: break-word;
 }
-h2 {
-  font-size: 2.4rem;
-  font-style: normal;
-  font-weight: $medium;
-  line-height: 2.9rem;
-  letter-spacing: 0em;
-  color: $gris;
-}
-h3 {
-  font-size: 1.8rem;
-  font-style: normal;
-  font-weight: $semiBold;
-  line-height: 2.2rem;
-  letter-spacing: 0rem;
-  text-align: left;
-  color: $grisOscuro;
-}
 
-h4 {
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: $semiBold;
-  line-height: 2rem;
-  letter-spacing: 0rem;
-  color: $grisOscuro;
-}
-h5 {
-  font-size: 1.4rem;
-  font-style: normal;
-  font-weight: $medium;
-  line-height: 1.7rem;
-  letter-spacing: 0em;
-  color: $plomo;
-}
 
 .icon::before {
   font-family: "Material Icons";
@@ -103,7 +83,7 @@ h5 {
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
-  color: $gris;
+  color: $blanco;
   position: absolute;
   left: 0;
   top: 50%;

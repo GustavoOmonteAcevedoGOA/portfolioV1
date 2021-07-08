@@ -4,23 +4,207 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="build/img/devchallenges.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="build/img/logo-final.svg" type="image/x-icon">
     <title>Portfolio Gustavo Omonte Acevedo</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Oxygen:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+
 
     <link rel="stylesheet" href="build/css/app.css">
 
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <picture>                
+               <img src="build/img/logo-final.svg" alt="Gustavo Omonte Acevedo photo"> 
+            </picture>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">Sobre mi</a></li>                
+                <li><a href="">Habilidades</a></li>
+                <li><a href="">Proyectos</a></li>
+                <li><a href="">Contactame</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            <div class="glass"></div>
+            <div class="informacion">
+                <div class="informacion-left">
+                    <picture>
+                        <source srcset="build/img/perfilsinfondo.webp" type="image/webp"> 
+                        <source srcset="build/img/perfilsinfondo.png" type="image/png"> 
+                       <img src="build/img/perfilsinfondo.png" alt="Gustavo Omonte Acevedo photo"> 
+                    </picture>
+                    <p class="icon"><a href="mailto:GustavoOmonteAcevedoGOA@gmail.com?Subject=Interesado%20en%20el%20Resume">GustavoOmonteAcevedoGOA@gmail.com</a> </p>
+                    <p class="icon">(+591) 65375886</p>
+                </div>
+                <div class="informacion-right">
+                    <h1>Gustavo Omonte Acevedo Web Developer</h1>
+
+                    <button type="button" data-toggle="modal" data-target="#plantilla1" translate="no">
+                        Resume
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="plantilla1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel" translate="no">Resume</h5>
+                                    <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <a href="files/Resume_Español.pdf" target="_blank">Resumen Español</a>
+                                    <a href="files/Resume_English.pdf" target="_blank">Resumen Ingles</a>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="modal-btn modal-btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="modal-btn modal-btn-primary">Save changes</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>                   
+                    
+                </div>
+            </div>
+            <div class="links">
+                <img src="build/img/linkedin.svg" alt="perfil de linkedin">
+                <img src="build/img/github.svg" alt="perfil de github">
+                <img src="build/img/codepen.svg" alt="perfil de codepen">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="glass"></div>
+            <div class="temas">
+
+            </div>
+            <div class="habilidades">
+                <div class="habilidades-icons">
+
+                </div>
+                <p>Desarrollador automotivado, dispuesto a aprender y crear aplicaciones de interfaz de usuario excepcionales.  que tiene como objetivo personal superarse día a día y ser una mejor persona y profesional
+                </p>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="container">
+            <div class="glass"></div>
+            <div class="proyectos">
+                <h2>Proyectos </h2>
+                <div class="proyectos-pages">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                </div>
+            </div>
+        </div>
+        <div class="proyecto-page1">
+            <div class="container">
+                <div class="glass"></div>
+                <div class="project">
+                    <picture>
+                        <source srcset="build/img/RecipeBlog.webp" type="image/webp">
+                        <source srcset="build/img/RecipeBlog.png" type="image/png">
+                        <img src="build/img/RecipeBlog.png" alt="Recipe Blog by Gustavo Omonte Acevedo">
+                    </picture>
+                </div>
+                <div class="project-info">
+                    <p><span>#HTML</span><span>#CSS</span><span>#responsive</span></p>
+                    <h2>Recipe Blog</h2>
+                    <p>In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. </p>
+                    <div class="project-bottons">
+                        <button translate="no" class="boton-azul">Demo</button>
+                        <button translate="no" class="boton-blanco">Code</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="glass"></div>
+                <div class="project">
+                    <picture>
+                        <source srcset="build/img/Checkout.webp" type="image/webp">
+                        <source srcset="build/img/Checkout.png" type="image/png">
+                        <img src="build/img/Checkout.png" alt="Recipe Blog by Gustavo Omonte Acevedo">
+                    </picture>
+                </div>
+                <div class="project-info">
+                    <p><span>#HTML</span><span>#CSS</span><span>#responsive</span></p>
+                    <h2>Recipe Blog</h2>
+                    <p>In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. </p>
+                    <div class="project-bottons">
+                        <button translate="no" class="boton-azul">Demo</button>
+                        <button translate="no" class="boton-blanco">Code</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="glass"></div>
+                <div class="project">
+                    <picture>
+                        <source srcset="build/img/Courses.webp" type="image/webp">
+                        <source srcset="build/img/Courses.png" type="image/png">
+                        <img src="build/img/Courses.png" alt="Courses by Gustavo Omonte Acevedo">
+                    </picture>
+                </div>
+                <div class="project-info">
+                    <p><span>#HTML</span><span>#CSS</span><span>#responsive</span></p>
+                    <h2>Recipe Blog</h2>
+                    <p>In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. </p>
+                    <div class="project-bottons">
+                        <button translate="no" class="boton-azul">Demo</button>
+                        <button translate="no" class="boton-blanco">Code</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="glass"></div>
+                <div class="project">
+                    <picture>
+                        <source srcset="build/img/EventsService.webp" type="image/webp">
+                        <source srcset="build/img/EventsService.png" type="image/png">
+                        <img src="build/img/EventsService.png" alt="EventsService by Gustavo Omonte Acevedo">
+                    </picture>
+                </div>
+                <div class="project-info">
+                    <p><span>#HTML</span><span>#CSS</span><span>#responsive</span></p>
+                    <h2>Recipe Blog</h2>
+                    <p>In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. </p>
+                    <div class="project-bottons">
+                        <button translate="no" class="boton-azul">Demo</button>
+                        <button translate="no" class="boton-blanco">Code</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="proyecto-page2">
+            
+        </div>
+        <div class="proyecto-page3">
+
+        </div>
+    </main>
     <main class="flex container">
         <div class="left">
             <div class="portfolio-perfil">
                 <div class="card">
                     <picture>
-                        <source srcset="build/img/ferfilPorfolio.webp" type="image/webp"> 
-                        <source srcset="build/img/ferfilPorfolio.png" type="image/png"> 
-                       <img src="build/img/ferfilPorfolio.png" alt="Gustavo Omonte Acevedo photo"> 
+                        <source srcset="build/img/perfilPorfolio.webp" type="image/webp"> 
+                        <source srcset="build/img/perfilPorfolio.png" type="image/png"> 
+                        <img src="build/img/perfilPorfolio.png" alt="Gustavo Omonte Acevedo photo"> 
                     </picture>
                     <h1>Gustavo Omonte Acevedo</h1>
                     <p>Front-end developer</p>
@@ -261,6 +445,7 @@
           <p>created by <span><a href="https://www.linkedin.com/in/gustavo-omonte-acevedo/">Gustavo Omonte Acevedo</a></span> - devChallenges.io </p>
         </div>
     </footer>
+    <script src="build/js/bundle.min.js"></script>
     
 </body>
 </html>
