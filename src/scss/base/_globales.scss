@@ -21,22 +21,16 @@ body {
   max-width: 120rem;
   margin: 0 auto;
   position: relative;
-  @include tablet {
-    width: 100%;
-  }
+  
 }
 
-.glass::before {
-  content: '';
-  background: $glasscolor;
-  opacity: 0.1;
-  box-shadow: 15px 15px 10px 10px #000000;
-  border-radius: 12px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
+.glass {
+  background:hsla(0,0%,91%,.1);
+  border-radius:12px;
+  box-shadow:10px 10px 10px 10px #0000002e;
+ 
+ }
+ 
 a {
   text-decoration: none;
 }
