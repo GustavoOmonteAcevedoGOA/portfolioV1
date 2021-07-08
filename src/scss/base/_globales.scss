@@ -12,20 +12,22 @@ body {
   font-size: 1.6rem;
   font-weight: $medium;
   line-height: 2.194rem;
-  background: linear-gradient(90deg, $bodyBackground1 0%, $bodyBackground2 100%);
+  background: $degradadoA1;
+  color: $blanco;
 }
-
 
 .container {
   width: 95%;
-  max-width: 144rem;
+  max-width: 120rem;
   margin: 0 auto;
   position: relative;
   @include tablet {
     width: 100%;
   }
 }
-.glass {
+
+.glass::before {
+  content: '';
   background: $glasscolor;
   opacity: 0.1;
   box-shadow: 15px 15px 10px 10px #000000;
@@ -39,11 +41,12 @@ a {
   text-decoration: none;
 }
 
-button{
+button {
   padding: 1.6rem 6.6rem;
-  background: linear-gradient(90deg, #FFB75E 0%, #E6A038 100%);
+  background: linear-gradient(90deg, #ffb75e 0%, #e6a038 100%);
   border-radius: 1.4rem;
   border: none;
+  color: $blanco;
 }
 .card {
   padding: 1.7rem 2.2rem;
@@ -70,12 +73,11 @@ h5 {
   overflow-wrap: break-word;
 }
 
-
 .icon::before {
   font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
-  font-size: 20px;
+  font-size: 25px;
   display: inline-block;
   line-height: 1;
   text-transform: none;

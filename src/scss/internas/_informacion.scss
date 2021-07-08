@@ -4,53 +4,72 @@
   justify-content: center;
   align-items: center;
   padding: 2rem 3.5rem;
+  padding-top: 4rem;
   .informacion-left {
-    
     word-break: break-all;
-    
+    text-align: center;
     picture {
-        margin-right: auto;
-        margin-left: auto;
-      width: 75%;
-
+      margin-right: auto;
+      margin-left: auto;
+      width: 100%;
+      padding-bottom: 4rem;
+      position: relative;
+      &::before {
+        content: "";
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        position: absolute;
+        background: $blanco;
+        opacity: 0.8;
+        filter: blur(130px);
+      }
     }
-    p{
+    p {
+      color: $blanco;
+      padding-left: 3rem;
+      position: relative;
+      display: inline-block;
+      &:nth-of-type(1)::before {
+        content: "email";
+      }
+      &:nth-of-type(2) {
+        margin-bottom: 4rem;
+      }
+      &:nth-of-type(2)::before {
+        content: "phone";
+      }
+      a {
+        text-decoration: none;
         color: $blanco;
-        padding-left: 3rem;
-        position: relative;        
-        &:nth-of-type(1)::before {
-            content: "email";
-        }
-        &:nth-of-type(2)::before {
-            content: "phone";
-        }
-        a{
-            text-decoration: none;
-            color: $blanco;
-        }
+      }
     }
   }
-  .informacion-right{
-      text-align: center;
-      h1{
-          font-family: $fuente_titulos;
-          font-size: 2.3rem;
-          line-height: 2.8rem;
-        background: linear-gradient(90deg, #FFB75E 0%, #E6A038 100%);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-      }
-      
+  .informacion-right {
+    text-align: center;
+    h1 {
+      font-family: $fuente_titulos;
+      font-size: 2.3rem;
+      line-height: 2.8rem;
+      padding-bottom: 4rem;
+      background: linear-gradient(90deg, #ffb75e 0%, #e6a038 100%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
   }
 }
-.links{
-    
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap:3rem;
-          img{
-              width: 6.6rem;
-          }
-          
-      }
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 7rem;
+  img {
+    width: 6.6rem;
+  }
+}

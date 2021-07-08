@@ -4,6 +4,11 @@
         @content;
     }
 }
+@mixin tabletMenu {
+    @media (max-width: #{$tablet}){
+        @content;
+    }
+}
 @mixin tablet {
     @media (min-width: #{$tablet}){
         @content;

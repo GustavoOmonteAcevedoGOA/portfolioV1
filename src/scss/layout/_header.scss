@@ -1,0 +1,57 @@
+header {
+  background: $degradadoN1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 5rem;
+  padding-left: 5%;
+  padding-right: 5%;
+  @include tablet{
+      justify-content: space-around;
+      
+  }
+  @include desktop{
+      font-size: 2.4rem;
+      padding-left: 10%;
+  padding-right: 10%;
+  }
+  .menu {
+    @include tabletMenu {
+      .menu-icon {
+        position: absolute;
+        top: 50%;
+        right: 1.6rem;
+        transform: translateY(-50%);
+        width: 4.4rem;
+        height: 4.4rem;
+        &::before {
+          content: "menu";
+          font-size: 4.4rem;
+        }
+      }
+    }
+    @include tablet{
+        display: none;
+    }
+  }
+  nav {
+    display: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+    @include tablet{
+        display: block;
+    }
+    ul {
+        display: flex;
+        gap: 5.8rem;
+      li {
+        list-style: none;
+        a{
+
+            color: $blanco;
+        }
+      }
+    }
+  }
+}
