@@ -1,0 +1,80 @@
+main{
+    .container{
+        max-width: 86.2rem;
+        .proyectos{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h2{
+                font-family: $fuente_titulos;
+                font-size: 2.3rem;
+                line-height: 2.8rem;                
+                background: $degradadoN1;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                margin-left: 2.4rem;
+            }
+            .proyectos-pages{
+                display: flex;
+                gap: 2.4rem;
+                margin-right: 2.4rem;
+                cursor: pointer;
+                p{
+                    background: $degradadoN1;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                
+                }
+            }
+        }
+    }
+    .proyecto-page{
+        
+        .container{
+            margin-top: 5rem;
+            max-width: 86.2rem; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            @include tablet{
+                flex-direction: row;
+                padding: 3.5rem 3.5rem;
+                gap: 2.5rem;
+            }
+            .proyecto{
+                margin-top: 5rem;
+                width: 66.55%;
+                margin-right: auto;
+                margin-left: auto;
+                @include tablet{
+                    margin-top: 0;
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+
+            }
+            .proyecto-info{
+                width: 86.55%;
+                .proyecto-buttons{
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    max-width: 40rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 2.5rem;
+                    button{
+                        margin-right: auto;
+                        margin-left: auto;
+                        margin-bottom: 5rem;
+                        @include tablet{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

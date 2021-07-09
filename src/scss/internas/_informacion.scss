@@ -5,9 +5,22 @@
   align-items: center;
   padding: 2rem 3.5rem;
   padding-top: 4rem;
+  @include tablet{
+    flex-direction: row;
+    justify-content: space-between;
+    
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 7rem;
+  }
   .informacion-left {
     word-break: break-all;
     text-align: center;
+    @include tablet{
+      width: 40%;
+
+    }
     picture {
       margin-right: auto;
       margin-left: auto;
@@ -33,15 +46,24 @@
       color: $blanco;
       padding-left: 3rem;
       position: relative;
-      display: inline-block;
+      @include tablet{
+        font-size: 2rem;
+        line-height: 2.4rem;
+        padding-left: 4rem;
+      }
+      
       &:nth-of-type(1)::before {
         content: "email";
+        font-size: 3rem;
       }
       &:nth-of-type(2) {
         margin-bottom: 4rem;
+        display: inline-block;
       }
       &:nth-of-type(2)::before {
         content: "phone";
+        font-size: 3rem;
+        
       }
       a {
         text-decoration: none;
@@ -51,14 +73,21 @@
   }
   .informacion-right {
     text-align: center;
+    @include tablet{
+      width: 50%;
+    }
     h1 {
       font-family: $fuente_titulos;
       font-size: 2.3rem;
       line-height: 2.8rem;
       padding-bottom: 4rem;
-      background: linear-gradient(90deg, #ffb75e 0%, #e6a038 100%);
+      background: $degradadoN1;
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
+      @include tablet{
+        font-size: 3.5rem;
+        line-height: 3.9rem;
+      }
     }
   }
 }
@@ -69,6 +98,10 @@
   gap: 3rem;
   padding-top: 4rem;
   padding-bottom: 7rem;
+  cursor: pointer;
+  @include tablet{
+    padding-top: 0;
+  }
   img {
     width: 6.6rem;
   }

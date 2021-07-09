@@ -1,6 +1,14 @@
-.boton-azul{
-    @include boton($azul,$blanco,inline-block);
-}
-.boton-blanco{
-    @include boton($blanco,$azul,inline-block)
-}
+button {
+    padding: 1.6rem 6.6rem;
+    background: $degradadoN1;
+    border-radius: 1.4rem;
+    border: none;
+    color: $blanco;
+    text-decoration: none;
+    text-align: center;
+    overflow-wrap: break-word;
+    display: inline-block;
+    &:hover {    
+      cursor: pointer;
+  }
+  }
