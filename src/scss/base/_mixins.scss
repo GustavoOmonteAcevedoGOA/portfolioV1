@@ -30,19 +30,4 @@
     }
 }
 
-@mixin boton($bgColor,$color,$display){
-    background-color: $bgColor;
-    color: $color;
-    font-weight: $medium;
-    text-decoration: none;
-    padding: 1.2rem 3.9rem;
-    text-align: center;
-    display: $display;    
-    border: 1px solid $azul;    
-    overflow-wrap: break-word;
-    border-radius: 1.2rem;
-    &:hover {
-        background-color: darken($bgColor,5);
-        cursor: pointer;
-    }
-}
+

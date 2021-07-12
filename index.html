@@ -111,7 +111,7 @@
                     <img src="build/img/figma.svg" alt="logo habilidad">
                     <img src="build/img/GITHUB-logo.svg" alt="logo habilidad">
                 </div>
-                <p>Desarrollador automotivado, dispuesto a aprender y crear aplicaciones de interfaz de usuario excepcionales.  que tiene como objetivo personal superarse día a día y ser una mejor persona y profesional
+                <p>Desarrollador automotivado, dispuesto a aprender y crear aplicaciones de interfaz de usuario excepcionales.  que tiene como objetivo personal superarse día a día, ser una mejor persona y profesional
                 </p>
             </div>
         </div>
@@ -213,10 +213,40 @@
 
         </div>
     </main>
-    
+    <section class="contacto">
+        <div class="container glass">
+            <div class="contactame">
+                <h2>Contactame </h2>
+            </div>
+        </div>
+        <div class="container glass">
+            <form class="formulario" name="contact" netlify method="POST" data-netlify="true">            
+                <fieldset>
+                    <div class="contenedor-campos">
+                        <div class="campo">
+                            <label for="name">Nombre</label>
+                            <input class="input-text" type="text" name="name" placeholder="Tu Nombre">
+                        </div>                        
+                        <div class="campo">
+                            <label for="email">Correo</label>
+                            <input class="input-text" type="email" name="email" placeholder="Tu Email">
+                        </div>
+                        <div class="campo">
+                            <label for="message">Mensaje</label>
+                            <textarea class="input-text" name="message" id="" cols="30" rows="10"></textarea>
+                        </div>                        
+                    </div>
+                    <div class="boton-contacto">
+                        <button type="submit" value="Enviar">Enviar</button>
+                        
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </section>
     <footer>
         <div class="container">
-          <p>created by <span><a href="https://www.linkedin.com/in/gustavo-omonte-acevedo/">Gustavo Omonte Acevedo</a></span> - devChallenges.io </p>
+          <p>Copyright © 2021 . Todos los derechos reservados <span><a href="https://www.linkedin.com/in/gustavo-omonte-acevedo/">GOA</a></span></p>
         </div>
     </footer>
     <script src="build/js/bundle.min.js"></script>
