@@ -1,0 +1,32 @@
+/*--===========ANIMACION DE APARICION=============--*/
+
+.animacion-aparicion {
+    opacity: 0;
+    transition: 3s;
+}
+
+.animacion-aparicion-arriba {
+    animation: aparecerArriba 3s;
+}
+
+.animacion-aparicion-abajo {
+    animation: aparecerAbajo 3s;
+}
+
+@keyframes aparecerArriba {
+    0% {
+        transform: translateY(-120px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes aparecerAbajo {
+    0% {
+        transform: translateY(120px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

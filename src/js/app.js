@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
    
     Modals();
     darkMode();
+    Changetheme();
+    AnimacionAparicion();
 });
 /*--===========ventana Modal=============--*/
 function Modals() {
@@ -149,4 +151,64 @@ function darkMode() {
             }, 1000);
         }
     });
+}
+
+
+function Changetheme(){
+    const Azul = document.querySelector('.tema-Azul');
+    const Pulpura = document.querySelector('.tema-Pulpura');
+    const Rojo = document.querySelector('.tema-Rojo');
+    const Fondo = document.querySelector('.fondo > img');    
+    const FolderImg = 'build/img/';
+    const SaveName= Fondo.src.split(FolderImg);   
+    
+    Azul.addEventListener('click', function(){
+        console.log(Fondo);        
+        document.body.classList.add('azul');
+        document.body.classList.remove('pulpura');
+        document.body.classList.remove('rojo');
+        Fondo.src=SaveName[0]+FolderImg+SaveName[1];
+    })
+    Pulpura.addEventListener('click', function(){
+        
+        document.body.classList.remove('azul');
+        document.body.classList.add('pulpura');
+        console.log(Fondo);
+        document.body.classList.remove('rojo');
+        Fondo.src=SaveName[0]+FolderImg+'fondo-verde.png';
+    })
+    Rojo.addEventListener('click', function(){        
+        document.body.classList.remove('azul');
+        document.body.classList.remove('pulpura');
+        document.body.classList.add('rojo');
+        Fondo.src=SaveName[0]+FolderImg+SaveName[1];
+    })
+}
+function AnimacionAparicion(){
+    /*--===========SCROLL ANIMACION DE APARICION=============--*/
+
+const animacionAparicion = document.querySelectorAll('.animacion-aparicion');
+
+let space = 800;
+/*--===========USAMOS ESTA VARIABLE PARA DETERMINAR SI SUBE O BAJA=============--*/
+function Aparecer() {
+    const scrollAparecer = document.documentElement.scrollTop;
+  
+    for (var i = 0; i < animacionAparicion.length; i++) {
+        let alturaAnimado = animacionAparicion[i].offsetTop;
+        let heightAnimado = animacionAparicion[i].offsetHeight;
+        let middleAnimado = heightAnimado/2;     
+
+        
+        
+        if ((alturaAnimado - space < scrollAparecer) && (scrollAparecer < alturaAnimado)) {
+            animacionAparicion[i].style.opacity = 1;            
+            animacionAparicion[i].classList.add('animacion-aparicion-arriba');
+            
+        }
+    }
+}
+window.addEventListener('scroll', Aparecer);
+
+/*--===========SCROLL ANIMACION DE APARICION=============--*/
 }
