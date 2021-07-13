@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     darkMode();
     Changetheme();
     AnimacionAparicion();
+    Shownav();
 });
 /*--===========ventana Modal=============--*/
 function Modals() {
@@ -211,4 +212,19 @@ function Aparecer() {
 window.addEventListener('scroll', Aparecer);
 
 /*--===========SCROLL ANIMACION DE APARICION=============--*/
+}
+
+function Shownav() {
+
+        const nav = document.querySelector('.navegacion');
+        const navMenu = document.querySelector('.menu-icon');
+        
+        
+        const navClose = document.querySelector('.close');
+        navMenu.addEventListener('click', () => {
+            nav.classList.toggle('visible');
+        });
+        navClose.addEventListener('click', () => {
+            nav.classList.toggle('visible');
+        });
 }

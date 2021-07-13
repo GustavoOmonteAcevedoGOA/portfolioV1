@@ -1,10 +1,21 @@
 .azul{
     background: $degradadoPrincipal;
+    @media (max-width: 767px) {
+        .navegacion {
+            background: $degradadoPrincipal;
+        }
+    }
 }
 .pulpura{
     background: $degradadoP1;
+    
     header{
         background: $verde;
+        @media (max-width: 767px) {
+            .navegacion {
+                background: $degradadoP1;
+            }
+        }
     }
     .informacion .informacion-right h1{
         background: $verde;
@@ -46,18 +57,23 @@
 }
 .rojo{
     background: $degradadoR1;
+    @media (max-width: 767px) {
+        .navegacion {
+            background: $degradadoR1;
+        }
+    }
 }
 
 
 .dark-mode{
     &.pulpura{
-        background: $degradadoP1,rgba(0, 0, 0, 0.8);
+        background: $degradadoP1;
     }
     &.rojo{
-        background: $degradadoR1,rgba(0, 0, 0, 0.8);
+        background: $degradadoR1;
     }
     &.azul{
-        background: $degradadoPrincipal,rgba(0, 0, 0, 0.8);
+        background: $degradadoPrincipal;
     }
     &::before{
         content: "";
@@ -67,5 +83,20 @@
         bottom: 0;
         position: absolute;
         background: rgba(0, 0, 0, 0.2);
+        
+    }
+    @media (max-width: 767px) {
+        .navegacion {
+            &::before{
+                content: "";
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                position: absolute;
+                background: rgba(0, 0, 0, 0.2);
+                z-index: -1;
+            }
+        }
     }
 }
