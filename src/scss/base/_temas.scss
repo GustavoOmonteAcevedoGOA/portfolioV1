@@ -1,0 +1,57 @@
+.dark-mode::before{
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+}
+.pulpura{
+    background: $degradadoP1;
+    header{
+        background: #60AB60;
+    }
+    .informacion .informacion-right h1{
+        background: #60AB60;
+            -webkit-background-clip: text;
+    }
+    button{
+        background: #60AB60;
+    }
+    .contacto .container .contactame {
+        h2 {
+            background: #60AB60;
+            -webkit-background-clip: text;
+        }
+    }
+    main .container .proyectos{
+        h2{
+            background: #60AB60;
+            -webkit-background-clip: text;
+        }
+        .proyectos-pages p{
+            background: #60AB60;
+            -webkit-background-clip: text;
+        }
+    } 
+    .proyectos{
+        h2{
+            background: #60AB60;
+        }
+        .proyectos-pages{
+            p{
+                background: #60AB60;
+            }
+        }
+    }
+    footer {
+        background: #60AB60;
+
+    }    
+}
+.rojo{
+    background: $degradadoR1;
+}
+
+
