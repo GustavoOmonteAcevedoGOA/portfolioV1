@@ -1,53 +1,47 @@
-.dark-mode::before{
-    content: "";
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.2);
+.azul{
+    background: $degradadoPrincipal;
 }
 .pulpura{
     background: $degradadoP1;
     header{
-        background: #60AB60;
+        background: $verde;
     }
     .informacion .informacion-right h1{
-        background: #60AB60;
-            -webkit-background-clip: text;
+        background: $verde;
+        -webkit-background-clip: text;
     }
     button{
-        background: #60AB60;
+        background: $verde;
     }
     .contacto .container .contactame {
         h2 {
-            background: #60AB60;
+            background: $verde;
             -webkit-background-clip: text;
         }
     }
     main .container .proyectos{
         h2{
-            background: #60AB60;
+            background: $verde;
             -webkit-background-clip: text;
         }
         .proyectos-pages p{
-            background: #60AB60;
+            background: $verde;
             -webkit-background-clip: text;
         }
     } 
     .proyectos{
         h2{
-            background: #60AB60;
+            background: $verde;
         }
         .proyectos-pages{
             p{
-                background: #60AB60;
+                background: $verde;
             }
         }
     }
     footer {
-        background: #60AB60;
-
+        background: $verde;
+        
     }    
 }
 .rojo{
@@ -55,3 +49,23 @@
 }
 
 
+.dark-mode{
+    &.pulpura{
+        background: $degradadoP1,rgba(0, 0, 0, 0.8);
+    }
+    &.rojo{
+        background: $degradadoR1,rgba(0, 0, 0, 0.8);
+    }
+    &.azul{
+        background: $degradadoPrincipal,rgba(0, 0, 0, 0.8);
+    }
+    &::before{
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.2);
+    }
+}

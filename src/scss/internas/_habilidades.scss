@@ -40,9 +40,13 @@ left: 4rem;
         height: 3.8rem;
         position: relative;
         &::before {
-          content: "nightlight";
+          content: attr(data-descr);
           font-size: 3.8rem;
         }
+        &.animar-cambio {
+          transform: scale(0%);
+          transition: all 0.5s linear;
+      }
       }
       .tema-Azul {
         border-radius: 50%;
@@ -117,4 +121,5 @@ left: 4rem;
     height: 100%;
     
   }
+  
 }
