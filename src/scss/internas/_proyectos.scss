@@ -24,6 +24,12 @@ main{
                     background: $degradadoSecundario;
                 -webkit-text-fill-color: transparent;
                 -webkit-background-clip: text;
+                width: 3rem;
+                text-align: center;
+                &:hover{
+                    text-decoration: underline;
+
+                }
                 
                 }
             }
@@ -77,5 +83,60 @@ main{
                 }
             }
         }
+    }
+}
+.pages{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    #page1{
+        transition: 0.8s all ease-in;
+    }
+    #page2{
+        
+    }
+}
+.pages{
+    #page1{
+
+        &.hidepage-left{
+            animation: toright 3s;
+            animation-fill-mode: forwards;
+        }
+    }
+    #page2{
+        &.hidepage-right{
+            animation: toleft 3s;
+            animation-fill-mode: forwards;
+        }
+
+    }
+}
+@keyframes toright {
+    0% {
+        position: absolute;
+        right: 0%;
+    }
+    75%{
+        position: absolute;
+        right: -140%;
+    }
+    100% {
+        position: absolute;
+        right: -140%;
+    }
+}
+@keyframes toleft {
+    0% {
+        position: absolute;
+        left: 0%;
+    }
+    75%{
+        position: absolute;
+        left: -140%;
+    }
+    100% {
+        position: absolute;
+        left: -140%;
     }
 }

@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     AnimacionAparicion();
     Shownav();
     ToMenu();
+    Pages();
 });
 /*--===========ventana Modal=============--*/
 function Modals() {
@@ -238,4 +239,20 @@ function ToMenu(){
             nav.classList.remove('visible');
         });
     }
+}
+function Pages(){
+    const Page1 = document.querySelector('#page1');
+    const Page2 = document.querySelector('#page2');
+    const ToPage1 = document.querySelector('.to-page1');
+    const ToPage2 = document.querySelector('.to-page2');
+    ToPage1.addEventListener('click', ()=>{
+        Page1.classList.remove('hidepage-left');
+        Page2.classList.add('hidepage-right');
+    })
+    ToPage2.addEventListener('click', ()=>{
+        Page1.classList.add('hidepage-left');
+        Page2.classList.remove('hidepage-right');
+    })
+
+    
 }
