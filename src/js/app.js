@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     Changetheme();
     AnimacionAparicion();
     Shownav();
+    ToMenu();
 });
 /*--===========ventana Modal=============--*/
 function Modals() {
@@ -227,4 +228,14 @@ function Shownav() {
         navClose.addEventListener('click', () => {
             nav.classList.toggle('visible');
         });
+}
+function ToMenu(){
+    const LinkMenu = document.querySelectorAll('a[data-menu="menu"]');
+    const nav = document.querySelector('.navegacion');
+    
+    for (const link of LinkMenu) {
+        link.addEventListener('click',()=>{
+            nav.classList.remove('visible');
+        });
+    }
 }
