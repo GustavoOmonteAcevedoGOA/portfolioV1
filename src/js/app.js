@@ -171,7 +171,7 @@ function Changetheme(){
         document.body.classList.add('pulpura');
 
         document.body.classList.remove('rojo');
-        Fondo.src=SaveName[0]+FolderImg+'fondo-verde.png';
+        Fondo.src=SaveName[0]+FolderImg+'fondo-verde.webp';
     })
     Rojo.addEventListener('click', function(){        
         document.body.classList.remove('azul');
