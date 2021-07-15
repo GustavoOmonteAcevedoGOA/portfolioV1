@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     Shownav();
     ToMenu();
     Pages();
+    
 });
 /*--===========ventana Modal=============--*/
 function Modals() {
@@ -62,14 +63,10 @@ function Modals() {
             while (!animacionCerrar.classList.contains(hideModals)) {
                 animacionCerrar = animacionCerrar.offsetParent;
             }
-            console.log(animacionCerrar);
-            console.log('el padre con la clase ' + hideModals);
-
+            
             while (!targetCerrarModal.classList.contains(showModals)) {
                 targetCerrarModal = targetCerrarModal.offsetParent;
-            }
-            console.log(targetCerrarModal);
-            console.log('el padre con la clase show');
+            }           
 
 
             if (targetCerrarModal.classList.contains(showModals)) {
@@ -90,13 +87,9 @@ function Modals() {
 
                 }
 
-                var borrarDiv = document.getElementsByClassName('modal-backdrop fade show');
-                console.log(borrarDiv);
+                var borrarDiv = document.getElementsByClassName('modal-backdrop fade show');                
                 document.body.removeChild(borrarDiv[0]);
-
             }
-
-
         })
     });
 }
@@ -166,7 +159,7 @@ function Changetheme(){
     const SaveName= Fondo.src.split(FolderImg);   
     
     Azul.addEventListener('click', function(){
-        console.log(Fondo);        
+
         document.body.classList.add('azul');
         document.body.classList.remove('pulpura');
         document.body.classList.remove('rojo');
@@ -176,7 +169,7 @@ function Changetheme(){
         
         document.body.classList.remove('azul');
         document.body.classList.add('pulpura');
-        console.log(Fondo);
+
         document.body.classList.remove('rojo');
         Fondo.src=SaveName[0]+FolderImg+'fondo-verde.png';
     })
@@ -192,23 +185,19 @@ function AnimacionAparicion(){
 
 const animacionAparicion = document.querySelectorAll('.animacion-aparicion');
 
-let space = 800;
+let space = 200;
+
 /*--===========USAMOS ESTA VARIABLE PARA DETERMINAR SI SUBE O BAJA=============--*/
 function Aparecer() {
     const scrollAparecer = document.documentElement.scrollTop;
-  
-    for (var i = 0; i < animacionAparicion.length; i++) {
-        let alturaAnimado = animacionAparicion[i].offsetTop;
-        let heightAnimado = animacionAparicion[i].offsetHeight;
-        let middleAnimado = heightAnimado/2;     
-
+    
+    for (const cuadro of animacionAparicion) {
         
-        
-        if ((alturaAnimado - space < scrollAparecer) && (scrollAparecer < alturaAnimado)) {
-            animacionAparicion[i].style.opacity = 1;            
-            animacionAparicion[i].classList.add('animacion-aparicion-arriba');
+        if((cuadro.getBoundingClientRect().top + space > scrollAparecer) && (cuadro.getBoundingClientRect().top + (space/3)< scrollAparecer)){
             
-        }
+                cuadro.style.opacity = 1;
+                cuadro.classList.add('animacion-aparicion-arriba');
+            }
     }
 }
 window.addEventListener('scroll', Aparecer);
@@ -248,10 +237,14 @@ function Pages(){
     ToPage1.addEventListener('click', ()=>{
         Page1.classList.remove('hidepage-left');
         Page2.classList.add('hidepage-right');
+        ToPage1.classList.add('active');
+        ToPage2.classList.remove('active');
     })
     ToPage2.addEventListener('click', ()=>{
         Page1.classList.add('hidepage-left');
         Page2.classList.remove('hidepage-right');
+        ToPage1.classList.remove('active');
+        ToPage2.classList.add('active');
     })
 
     

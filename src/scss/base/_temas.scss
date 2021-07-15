@@ -21,6 +21,9 @@
         background: $verde;
         -webkit-background-clip: text;
     }
+    .modal-content{
+        background: $degradadoP1;
+    }
     button{
         background: $verde;
     }
@@ -61,6 +64,9 @@
         .navegacion {
             background: $degradadoR1;
         }
+    }
+    .modal-content{
+        background: $degradadoR1;
     }
 }
 

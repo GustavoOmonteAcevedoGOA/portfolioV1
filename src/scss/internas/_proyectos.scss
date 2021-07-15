@@ -22,14 +22,21 @@ main{
                 cursor: pointer;
                 p{
                     background: $degradadoSecundario;
-                -webkit-text-fill-color: transparent;
-                -webkit-background-clip: text;
-                width: 3rem;
-                text-align: center;
-                &:hover{
-                    text-decoration: underline;
-
-                }
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    width: 3rem;
+                    text-align: center;
+                    line-height: 1.8; 
+                    &:hover{                    
+                        border: 1px solid $blanco;
+                    
+                        border-radius: 50%;
+                    }
+                    &.active{
+                        border: 1px solid $blanco;
+                    
+                        border-radius: 50%;
+                    }
                 
                 }
             }
@@ -72,12 +79,21 @@ main{
                     margin-left: auto;
                     margin-right: auto;
                     margin-top: 2.5rem;
-                    button{
-                        margin-right: auto;
-                        margin-left: auto;
-                        margin-bottom: 5rem;
-                        @include tablet{
-                            margin-bottom: 0;
+                    a{
+                        text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    max-width: 40rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                        button{
+                            margin-right: auto;
+                            margin-left: auto;
+                            margin-bottom: 3.5rem;
+                            @include tablet{
+                                margin-bottom: 0;
+                            }
                         }
                     }
                 }
@@ -88,28 +104,42 @@ main{
 .pages{
     position: relative;
     display: flex;
-    overflow: hidden;
+    
     #page1{
         transition: 0.8s all ease-in;
     }
     #page2{
-        
+        transition: 0.8s all ease-in;
     }
 }
 .pages{
+    overflow: hidden;
     #page1{
-
         &.hidepage-left{
-            animation: toright 3s;
-            animation-fill-mode: forwards;
+            position: absolute;
+            opacity: 0;
+            right: 200%;
+            transition: 0.8s;
+            
+            @include tablet{
+                animation: toright 3s;
+                animation-fill-mode: forwards;
+            }
         }
+        
     }
+    
     #page2{
         &.hidepage-right{
-            animation: toleft 3s;
-            animation-fill-mode: forwards;
+            position: absolute;
+            opacity: 0;
+            left: 200%;
+            transition: 0.8s;
+            @include tablet{
+                animation: toleft 3s;
+                animation-fill-mode: forwards;
+            }
         }
-
     }
 }
 @keyframes toright {

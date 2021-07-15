@@ -94,13 +94,19 @@
       flex-direction: column;
       gap: 2rem;
       a{
-        border: 1px solid $grisOscuro;
+        width: 80%;
+        border: 1px solid $blanco;
         text-decoration: none;
         padding: 1rem 1.5rem;
-        color: $grisOscuro;
+        color: $blanco;
         border-radius: 1.4rem;
+        margin-right: auto;
+        margin-left: auto;
         &:hover{
           box-shadow: 10px 10px 10px 10px #0000002e;
+        }
+        @include tablet{
+          width: 50%;
         }
       }
     }
