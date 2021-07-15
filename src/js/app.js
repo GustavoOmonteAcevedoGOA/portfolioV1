@@ -193,7 +193,7 @@ function Aparecer() {
     
     for (const cuadro of animacionAparicion) {
         
-        if((cuadro.getBoundingClientRect().top + space > scrollAparecer) && (cuadro.getBoundingClientRect().top + (space/3)< scrollAparecer)){
+        if((cuadro.getBoundingClientRect().top  < scrollAparecer + space) ){
             
                 cuadro.style.opacity = 1;
                 cuadro.classList.add('animacion-aparicion-arriba');
