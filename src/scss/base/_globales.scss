@@ -5,8 +5,7 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
-  scroll-behavior: smooth;
+  box-sizing: inherit; 
 }
 body {
   font-family: $fuente_principal;

@@ -6,6 +6,15 @@ header {
   margin-bottom: 5rem;
   padding-left: 5%;
   padding-right: 5%;
+  &.fijo{
+    opacity: 1;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 .3rem .4rem #444;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    z-index: 15;
+  }
   @include tablet {
     justify-content: space-around;
   }
@@ -136,3 +145,4 @@ header {
     right: 0;
   }
 }
+

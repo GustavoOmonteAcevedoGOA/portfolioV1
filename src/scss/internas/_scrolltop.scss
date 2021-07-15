@@ -1,0 +1,42 @@
+/* SUBIR PANTALLA */
+
+.scrolltop {
+  align-items: center;
+  background: $degradadoSecundario;
+  border-radius: 0.9rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  padding: 0.4rem;
+  position: fixed;
+  right: 1rem;
+  text-decoration: none;
+  transition: 1.2s;
+  visibility: hidden;
+  z-index: 15;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid $blanco;
+  @include tablet{
+      right: 2rem;
+  }
+  &::before {
+    content: "keyboard_arrow_up";
+    font-size: 4rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.scrolltop:hover {
+    box-shadow: 3px 3px 10px 10px #0000002e;
+    cursor: pointer;
+}
+
+
+/* Show scrolltop */
+
+.show-scroll {
+  visibility: visible;
+  bottom: 1.5rem;
+}

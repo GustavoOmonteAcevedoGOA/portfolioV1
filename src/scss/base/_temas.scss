@@ -5,6 +5,9 @@
             background: $degradadoPrincipal;
         }
     }
+    .scrolltop {
+        background: $degradadoSecundario;
+    }
 }
 .pulpura{
     background: $degradadoP1;
@@ -16,6 +19,9 @@
                 background: $degradadoP1;
             }
         }
+    }
+    .scrolltop {
+        background:  $verde;
     }
     .informacion .informacion-right h1{
         background: $verde;
@@ -67,6 +73,9 @@
     }
     .modal-content{
         background: $degradadoR1;
+    }
+    .scrolltop {
+        background: $degradadoSecundario;
     }
 }
 

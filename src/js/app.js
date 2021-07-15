@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     Shownav();
     ToMenu();
     Pages();
+    scrollNav();
+    navegacionFija();
     
 });
 /*--===========ventana Modal=============--*/
@@ -249,3 +251,55 @@ function Pages(){
 
     
 }
+function navegacionFija(){
+    const barra = document.querySelector('HEADER');
+    const implementacion = document.querySelector('#proyectos');
+    const scrollAparecer = document.documentElement.scrollTop;
+
+    window.addEventListener('scroll', ()=>{
+        if(scrollAparecer>implementacion.getBoundingClientRect().top){
+            barra.classList.add('fijo'); 
+        }else{
+            barra.classList.remove('fijo');
+        }
+
+
+    });  
+    
+
+}
+function scrollNav(){
+    const enlaces = document.querySelectorAll('LI > A');
+    enlaces.forEach( function(enlace){
+        enlace.addEventListener('click', function(e){
+            e.preventDefault();
+            const irA = e.target.attributes.href.value;
+            const seccion = document.querySelector(irA);
+            seccion.scrollIntoView({
+                behavior: 'smooth',
+            });
+        });
+    });
+}
+
+function scrollTop() {
+    const scrollTop = document.getElementById('scroll-top');
+    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+    if (this.scrollY >= 560) scrollTop.classList.add('show-scroll');
+    else scrollTop.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollTop)
+
+
+/* animacion para subir lento */
+
+function scrollUp() {
+    const currentScroll = document.documentElement.scrollTop;
+    if (currentScroll > 0) {
+        window.requestAnimationFrame(scrollUp);
+        window.scrollTo(0, currentScroll - (currentScroll / 20))
+    }
+}
+
+
+document.getElementById("scroll-top").addEventListener("click", scrollUp);
