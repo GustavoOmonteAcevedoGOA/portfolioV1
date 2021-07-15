@@ -46,13 +46,19 @@ header {
       }
       ul {
         display: flex;
-        flex-direction: column;
-        gap: 5.8rem;
+        flex-direction: column;        
         padding-left: 0;
         @include tablet{
           flex-direction: row;
         }
         li {
+          &:not(:last-of-type){
+          margin-bottom: 5.8rem;
+          @include tablet{
+            margin-bottom: 0rem;
+            margin-right: 5.8rem;
+          }
+          }
           list-style: none;
           text-align: center;
           a {

@@ -1,172 +1,185 @@
-main{
-    margin-bottom: 8rem;
-    .container{
-        max-width: 86.2rem;
-        .proyectos{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            h2{
-                font-family: $fuente_titulos;
-                font-size: 2.3rem;
-                line-height: 5.399rem;                
-                background: $degradadoSecundario;
-                -webkit-text-fill-color: transparent;
-                -webkit-background-clip: text;
-                margin-left: 2.4rem;
-            }
-            .proyectos-pages{
-                display: flex;
-                gap: 2.4rem;
-                margin-right: 2.4rem;
-                cursor: pointer;
-                p{
-                    background: $degradadoSecundario;
-                    -webkit-text-fill-color: transparent;
-                    -webkit-background-clip: text;
-                    width: 3rem;
-                    text-align: center;
-                    line-height: 1.8; 
-                    &:hover{                    
-                        border: 1px solid $blanco;
-                    
-                        border-radius: 50%;
-                    }
-                    &.active{
-                        border: 1px solid $blanco;
-                    
-                        border-radius: 50%;
-                    }
-                
-                }
-            }
-        }
-    }
-    .proyecto-page{
-        
-        .container{
-            margin-top: 5rem;
-            max-width: 86.2rem; 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            @include tablet{
-                flex-direction: row;
-                padding: 3.5rem 3.5rem;
-                gap: 2.5rem;
-            }
-            .proyecto{
-                margin-top: 5rem;
-                width: 66.55%;
-                margin-right: auto;
-                margin-left: auto;
-                @include tablet{
-                    margin-top: 0;
-                    margin-right: 0;
-                    margin-left: 0;
-                }
+main {
+  margin-bottom: 8rem;
+  .container {
+    max-width: 86.2rem;
+    .proyectos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h2 {
+        font-family: $fuente_titulos;
+        font-size: 2.3rem;
+        line-height: 5.399rem;
+        background: $degradadoSecundario;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        margin-left: 2.4rem;
+      }
+      .proyectos-pages {
+        display: flex;
 
-            }
-            .proyecto-info{
-                width: 86.55%;
-                .proyecto-buttons{
-                    text-align: center;
-                    display: flex;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                    max-width: 40rem;
-                    margin-left: auto;
-                    margin-right: auto;
-                    margin-top: 2.5rem;
-                    a{
-                        text-align: center;
-                    display: flex;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                    max-width: 40rem;
-                    margin-left: auto;
-                    margin-right: auto;
-                        button{
-                            margin-right: auto;
-                            margin-left: auto;
-                            margin-bottom: 3.5rem;
-                            @include tablet{
-                                margin-bottom: 0;
-                            }
-                        }
-                    }
-                }
-            }
+        cursor: pointer;
+        p {
+          margin-right: 2.5rem;
+          background: $degradadoSecundario;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          width: 3rem;
+          text-align: center;
+          line-height: 1.8;
+          &:hover {
+            border: 1px solid $blanco;
+
+            border-radius: 50%;
+          }
+          &.active {
+            border: 1px solid $blanco;
+
+            border-radius: 50%;
+          }
         }
+      }
     }
-}
-.pages{
-    position: relative;
-    display: flex;
-    
-    #page1{
-        transition: 0.8s all ease-in;
-    }
-    #page2{
-        transition: 0.8s all ease-in;
-    }
-}
-.pages{
-    overflow: hidden;
-    #page1{
-        &.hidepage-left{
-            position: absolute;
-            opacity: 0;
-            right: 200%;
-            transition: 0.8s;
-            
+  }
+  .proyecto-page {
+    .container {
+      margin-top: 5rem;
+      max-width: 86.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include tablet {
+        flex-direction: row;
+        padding: 3.5rem 3.5rem;
+      }
+      .proyecto {
+        margin-top: 5rem;
+        width: 66.55%;
+        margin-right: auto;
+        margin-left: auto;
+        @include tablet {
+          margin-top: 0;
+          margin-right: 0;
+          margin-left: 0;
+        }
+        &:not(:last-of-type) {
             @include tablet{
-                animation: toright 3s;
-                animation-fill-mode: forwards;
+                margin-right: 2.5rem;
             }
         }
-        
-    }
-    
-    #page2{
-        &.hidepage-right{
-            position: absolute;
-            opacity: 0;
-            left: 200%;
-            transition: 0.8s;
-            @include tablet{
-                animation: toleft 3s;
-                animation-fill-mode: forwards;
-            }
+      }
+      .proyecto-info {
+        width: 86.55%;
+        @include tablet{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
+        .proyecto-buttons {
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          max-width: 40rem;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 2.5rem;
+          margin-bottom: 1rem;
+          @include tablet{
+              margin-left: 0rem;
+              margin-right: 0rem;
+              margin-bottom: 0rem;
+          }
+          a {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 40rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2rem;
+
+            button {
+              margin-right: auto;
+              margin-left: auto;
+              margin-bottom: 2rem;
+              @include tablet {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
     }
+  }
+}
+.pages {
+  position: relative;
+  display: flex;
+
+  #page1 {
+    transition: 0.8s all ease-in;
+  }
+  #page2 {
+    transition: 0.8s all ease-in;
+  }
+}
+.pages {
+  overflow: hidden;
+  #page1 {
+    &.hidepage-left {
+      position: absolute;
+      opacity: 0;
+      right: 200%;
+      transition: 0.8s;
+
+      @include tablet {
+        animation: toright 3s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+
+  #page2 {
+    &.hidepage-right {
+      position: absolute;
+      opacity: 0;
+      left: 200%;
+      transition: 0.8s;
+      @include tablet {
+        animation: toleft 3s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
 }
 @keyframes toright {
-    0% {
-        position: absolute;
-        right: 0%;
-    }
-    75%{
-        position: absolute;
-        right: -140%;
-    }
-    100% {
-        position: absolute;
-        right: -140%;
-    }
+  0% {
+    position: absolute;
+    right: 0%;
+  }
+  75% {
+    position: absolute;
+    right: -140%;
+  }
+  100% {
+    position: absolute;
+    right: -140%;
+  }
 }
 @keyframes toleft {
-    0% {
-        position: absolute;
-        left: 0%;
-    }
-    75%{
-        position: absolute;
-        left: -140%;
-    }
-    100% {
-        position: absolute;
-        left: -140%;
-    }
+  0% {
+    position: absolute;
+    left: 0%;
+  }
+  75% {
+    position: absolute;
+    left: -140%;
+  }
+  100% {
+    position: absolute;
+    left: -140%;
+  }
 }
