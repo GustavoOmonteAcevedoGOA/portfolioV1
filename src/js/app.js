@@ -255,10 +255,15 @@ function navegacionFija(){
     const barra = document.querySelector('HEADER');
     const implementacion = document.querySelector('#proyectos');
     const scrollAparecer = document.documentElement.scrollTop;
+    const menu = document.querySelector('.navegacion');
+    
 
     window.addEventListener('scroll', ()=>{
         if(scrollAparecer>implementacion.getBoundingClientRect().top){
-            barra.classList.add('fijo'); 
+            if(!menu.classList.contains('visible')){
+                barra.classList.add('fijo');
+            }
+             
         }else{
             barra.classList.remove('fijo');
         }
