@@ -8,17 +8,17 @@
     @include tablet{
         display: flex;
         justify-content: center;
-        padding-bottom: 4rem;
+        gap: 5rem;
+        padding: 4rem 3rem;
         position: relative;
     }
     .temas {
       display: flex;
-      
+
       justify-content: space-around;
       align-items: center;
       @include tablet{
           flex-direction: column;
-         position: absolute;
       }
 
       &.glass-temas {
@@ -28,9 +28,8 @@
         margin-left: auto;
         @include tablet{
             width: 10%;
-            margin-left: 4rem;
-            height: 80%;
-left: 4rem;
+            margin-left: 0;
+            margin-right: 0;
         }
       }
       .tema-dark {
@@ -77,23 +76,30 @@ left: 4rem;
       margin-left: auto;
       margin-right: auto;
       @include tablet{
-          width: 60%;
+          width: 65%;
+          margin: 0;
+          padding-bottom: 0;
       }
       .skill-groups {
         display: grid;
-        gap: 2.2rem;
-        margin-bottom: 3rem;
+        gap: 1.6rem;
+        margin-bottom: 2.5rem;
+        @include tablet{
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 2.5rem;
+        }
       }
       .skill-group {
         h3 {
           font-family: $fuente_titulos;
-          font-size: 1.5rem;
+          font-size: 1.4rem;
           letter-spacing: 0.12em;
           text-transform: uppercase;
-          background: $degradadoSecundario;
+          background: $degradadoPrincipal;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          margin-bottom: 1rem;
+          margin-bottom: 0.8rem;
+          margin-top: 0;
           text-align: center;
           @include tablet{
             text-align: left;
@@ -103,7 +109,7 @@ left: 4rem;
       .skill-chips {
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 0.8rem;
         justify-content: center;
         @include tablet{
           justify-content: flex-start;
@@ -112,9 +118,9 @@ left: 4rem;
           background: $glasscolor;
           border: 1px solid rgba(255, 255, 255, 0.35);
           border-radius: 2rem;
-          font-size: 1.4rem;
+          font-size: 1.3rem;
           line-height: 1;
-          padding: 0.9rem 1.5rem;
+          padding: 0.7rem 1.2rem;
           white-space: nowrap;
         }
       }

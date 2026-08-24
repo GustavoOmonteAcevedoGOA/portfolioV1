@@ -9,6 +9,8 @@ header {
   &.fijo{
     opacity: 1;
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     box-shadow: 0 .3rem .4rem #444;
     animation-name: aparecer;

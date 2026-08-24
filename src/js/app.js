@@ -253,24 +253,28 @@ function Pages(){
 }
 function navegacionFija(){
     const barra = document.querySelector('HEADER');
-    const implementacion = document.querySelector('#proyectos');
-    const scrollAparecer = document.documentElement.scrollTop;
+    const implementacion = document.querySelector('#ai');
     const menu = document.querySelector('.navegacion');
-    
+
 
     window.addEventListener('scroll', ()=>{
-        if(scrollAparecer>implementacion.getBoundingClientRect().top){
+        if(implementacion.getBoundingClientRect().top < 0){
             if(!menu.classList.contains('visible')){
+                // al fijar el header sale del flujo del documento;
+                // se compensa su alto + margen para que el contenido no salte
+                const compensacion = barra.offsetHeight + parseFloat(getComputedStyle(barra).marginBottom);
+                document.body.style.paddingTop = compensacion + 'px';
                 barra.classList.add('fijo');
             }
-             
+
         }else{
             barra.classList.remove('fijo');
+            document.body.style.paddingTop = '';
         }
 
 
-    });  
-    
+    });
+
 
 }
 function scrollNav(){
@@ -299,11 +303,7 @@ window.addEventListener('scroll', scrollTop)
 /* animacion para subir lento */
 
 function scrollUp() {
-    const currentScroll = document.documentElement.scrollTop;
-    if (currentScroll > 0) {
-        window.requestAnimationFrame(scrollUp);
-        window.scrollTo(0, currentScroll - (currentScroll / 20))
-    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 

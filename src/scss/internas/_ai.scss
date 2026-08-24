@@ -18,10 +18,13 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: $fuente_titulos;
-    font-size: 2.3rem;
+    font-size: 2.6rem;
     line-height: 5.399rem;
-    margin-left: 2.4rem;
     margin-bottom: 1rem;
+    text-align: center;
+    @include tablet {
+      font-size: 3rem;
+    }
   }
 
   .ai-intro {
@@ -33,6 +36,13 @@
       font-size: 2rem;
       line-height: 3.2rem;
       width: 90%;
+    }
+
+    strong {
+      background: $degradadoSecundario;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: $bold;
     }
   }
 
@@ -46,7 +56,26 @@
   }
 
   .ai-card {
-    padding: 2.5rem 2.2rem;
+    background: rgba(233, 233, 233, 0.16);
+    overflow: hidden;
+    padding: 2.8rem 2.2rem 2.5rem;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &::before {
+      background: $degradadoSecundario;
+      content: "";
+      height: 0.5rem;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &:hover {
+      box-shadow: 10px 10px 10px 10px #0000002e;
+      transform: translateY(-0.5rem);
+    }
 
     h3 {
       background: $degradadoSecundario;
@@ -82,15 +111,26 @@
 /* theme overrides to match the existing theme system */
 .pulpura .ai {
   h2,
+  .ai-intro strong,
   .ai-card h3 {
     background: $verde;
     -webkit-background-clip: text;
+  }
+  .ai-card::before {
+    background: $verde;
   }
   .ai-card li::marker {
     color: $verde;
   }
 }
-.pulpura .habilidades .skill-group h3 {
-  background: $verde;
+
+/* skill group titles follow the page-background gradient of each theme,
+   so they stand out against the orange backdrop of the skills section */
+.pulpura .habilidades .container .habilidad .skill-group h3 {
+  background: $degradadoP1;
+  -webkit-background-clip: text;
+}
+.rojo .habilidades .container .habilidad .skill-group h3 {
+  background: $degradadoR1;
   -webkit-background-clip: text;
 }
