@@ -1,0 +1,96 @@
+.ai {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+
+  .container {
+    max-width: 86.2rem;
+
+    &.glass {
+      padding: 3.5rem 2.4rem;
+      @include tablet {
+        padding: 4rem 3.5rem;
+      }
+    }
+  }
+
+  h2 {
+    background: $degradadoSecundario;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: $fuente_titulos;
+    font-size: 2.3rem;
+    line-height: 5.399rem;
+    margin-left: 2.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .ai-intro {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin: 0 auto 3.5rem;
+    text-align: center;
+    @include tablet {
+      font-size: 2rem;
+      line-height: 3.2rem;
+      width: 90%;
+    }
+  }
+
+  .ai-grid {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: 1fr;
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .ai-card {
+    padding: 2.5rem 2.2rem;
+
+    h3 {
+      background: $degradadoSecundario;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: $fuente_titulos;
+      font-size: 1.9rem;
+      line-height: 2.4rem;
+      margin-bottom: 1.8rem;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.8rem;
+
+      li {
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+        margin-bottom: 1.4rem;
+
+        &::marker {
+          color: #ffb75e;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+/* theme overrides to match the existing theme system */
+.pulpura .ai {
+  h2,
+  .ai-card h3 {
+    background: $verde;
+    -webkit-background-clip: text;
+  }
+  .ai-card li::marker {
+    color: $verde;
+  }
+}
+.pulpura .habilidades .skill-group h3 {
+  background: $verde;
+  -webkit-background-clip: text;
+}

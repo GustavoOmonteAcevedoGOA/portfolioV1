@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio Gustavo Omonte Acevedo">
+    <meta name="description" content="Gustavo Omonte Acevedo — Full Stack Developer (C# / .NET, React / TypeScript) building AI-integrated products: MCP tools, LLM-powered features and AI-assisted workflows.">
+    <meta property="og:title" content="Gustavo Omonte Acevedo | Full Stack Developer">
+    <meta property="og:description" content="Full Stack Developer (C# / .NET, React / TypeScript) building AI-integrated products: MCP tools, LLM-powered features and AI-assisted workflows.">
+    <meta property="og:type" content="website">
+    <!-- TODO: once the Netlify site name is set, add og:url and og:image with absolute URLs -->
     <link rel="shortcut icon" href="build/img/logo-final.svg" type="image/x-icon">
-    <title>Portfolio Gustavo Omonte Acevedo</title>
+    <title>Gustavo Omonte Acevedo | Full Stack Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Oxygen:wght@400;700&display=swap" rel="stylesheet"> 
@@ -34,12 +38,13 @@
                 <ul>
                     <li><a data-menu="menu" href="#sobremi">About me</a></li>
                     <li><a data-menu="menu" href="#habilidades">Skills </a></li>
+                    <li><a data-menu="menu" href="#ai">AI</a></li>
                     <li><a data-menu="menu" href="#proyectos">Projects</a></li>
                     <li><a data-menu="menu" href="#contacto">Contact me</a></li>
                 </ul>
             </nav>
             <div class="close">
-                <img src="build/img/close.svg" alt="Cerrar Navegacion">
+                <img src="build/img/close.svg" alt="Close navigation">
             </div>
         </div>
         <div class="menu">
@@ -56,11 +61,11 @@
                         <source srcset="build/img/perfilPorfolio.png" type="image/png"> 
                        <img src="build/img/perfilPorfolio.png" alt="Gustavo Omonte Acevedo photo"> 
                     </picture>
-                    <p class="icon"><a href="mailto:GustavoOmonteAcevedoGOA@gmail.com?Subject=Interesado%20en%20Contactar">GustavoOmonteAcevedoGOA@gmail.com</a> </p>
+                    <p class="icon"><a href="mailto:GustavoOmonteAcevedoGOA@gmail.com?Subject=Contact%20from%20your%20portfolio">GustavoOmonteAcevedoGOA@gmail.com</a> </p>
                     <p class="icon">(+591) 65375886</p>
                 </div>
                 <div class="informacion-right">
-                    <h1>Gustavo Omonte Acevedo Web Developer</h1>
+                    <h1>Gustavo Omonte Acevedo Full Stack Developer</h1>
 
                     <button type="button" data-toggle="modal" data-target="#plantilla1" translate="no">
                         Resume
@@ -76,8 +81,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <a href="files/Resume_Español.pdf" target="_blank">Resumen Español</a>
-                                    <a href="files/Resume_English.pdf" target="_blank">Resume Ingles</a>
+                                    <a href="files/Resume_Gustavo_Omonte_Acevedo.pdf" target="_blank">Resume (English, PDF)</a>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="modal-btn modal-btn-secondary" data-dismiss="modal">Close</button>
@@ -112,18 +116,91 @@
 
             </div>
             <div class="habilidad">
-                <div class="habilidad-icons">
-                    <img src="build/img/HTML.svg" alt="logo habilidad">
-                    <img src="build/img/CSS.svg" alt="logo habilidad">
-                    <img src="build/img/JS.svg" alt="logo habilidad">
-                    <img src="build/img/SASS.svg" alt="logo habilidad">
-                    <img src="build/img/gulp.svg" alt="logo habilidad">
-                    <img src="build/img/figma.svg" alt="logo habilidad">
-                    <img src="build/img/GITHUB-logo.svg" alt="logo habilidad">
+                <div class="skill-groups">
+                    <div class="skill-group">
+                        <h3>Frontend</h3>
+                        <div class="skill-chips">
+                            <span>React 18</span>
+                            <span>TypeScript</span>
+                            <span>JavaScript</span>
+                            <span>HTML / CSS</span>
+                            <span>Sass</span>
+                            <span>TanStack Query</span>
+                            <span>Nx monorepo</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Backend</h3>
+                        <div class="skill-chips">
+                            <span>C#</span>
+                            <span>ASP.NET Core</span>
+                            <span>.NET Framework 4.8</span>
+                            <span>NHibernate</span>
+                            <span>OData</span>
+                            <span>MassTransit / RabbitMQ</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Databases</h3>
+                        <div class="skill-chips">
+                            <span>SQL Server</span>
+                            <span>PostgreSQL</span>
+                            <span>MySQL</span>
+                            <span>MongoDB</span>
+                            <span>Redis</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Testing &amp; DevOps</h3>
+                        <div class="skill-chips">
+                            <span>Jest</span>
+                            <span>Playwright</span>
+                            <span>Docker</span>
+                            <span>Terraform</span>
+                            <span>Azure DevOps</span>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>AI &amp; LLM Engineering</h3>
+                        <div class="skill-chips">
+                            <span>Claude Code</span>
+                            <span>OpenAI API</span>
+                            <span>MCP tools</span>
+                            <span>AI-assisted code review</span>
+                        </div>
+                    </div>
                 </div>
                 <p>
-                    Self-motivated developer willing to learn and create exceptional user interface applications. whose personal objective is to improve himself day by day, to be a better person and professional 
+                    Full Stack Developer with 5+ years of experience, from responsive frontends to .NET backends at enterprise scale. What I like most about this profession is the ability to keep learning: when I face new situations, I set a goal in mind and keep going, no matter what happens.
                 </p>
+            </div>
+        </div>
+    </section>
+    <section id="ai" class="ai animacion-aparicion">
+        <div class="container glass">
+            <h2>AI-Augmented Development</h2>
+            <p class="ai-intro">
+                The biggest change in these last five years: AI became part of how I build software every day. I'm currently a member of the AI Integration team on a multi-tenant construction ERP SaaS platform (C# / .NET, React / TypeScript, Azure), building the platform's AI assistant.
+            </p>
+            <div class="ai-grid">
+                <div class="ai-card glass">
+                    <h3>What I build with AI</h3>
+                    <ul>
+                        <li>MCP (Model Context Protocol) tools: typed, deterministic, unit-tested endpoints over the payroll / HR domain, wired into an LLM-powered chat engine (OpenAI API, streaming-first SSE architecture with tool-lifecycle events).</li>
+                        <li>AI-assisted delivery workflow: Claude Code for investigation, root-cause analysis and implementation, with every PR reviewed by humans plus automated AI code review.</li>
+                        <li>Validation of financial calculations and bug fixes against real tenant data with Playwright browser automation before QA handoff.</li>
+                    </ul>
+                </div>
+                <div class="ai-card glass">
+                    <h3>Principles I work by</h3>
+                    <ul>
+                        <li>AI accelerates the work, but I own correctness: every AI-assisted change ships with tests and human review.</li>
+                        <li>Give models typed, deterministic, well-tested tools instead of free-form access to systems.</li>
+                        <li>Validate output against real data — a plausible-looking answer is not a correct one.</li>
+                        <li>Context is leverage: I write investigation docs and diagnostic scripts into the repo, so root-cause knowledge survives beyond each ticket, for humans and AI alike.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -152,7 +229,7 @@
                     <div class="proyecto-info">
                         <p><span>#HTML</span><span>#CSS</span><span>#responsive</span></p>
                         <h2>Recipe Blog</h2>
-                        <p>In this proyecto, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io.</p>
+                        <p>In this project, I worked with HTML and CSS to create a responsive page. The design is from devchallenges.io.</p>
                         <div class="proyecto-buttons">
                             <a href="https://devchallenges4.netlify.app/" rel="noopener" target="_blank"><button translate="no" >Demo</button></a>
                             <a href="https://github.com/GustavoOmonteAcevedoGOA/Devchallenges4" rel="noopener" target="_blank"><button translate="no" >Code</button></a>
@@ -165,13 +242,13 @@
                         <picture>
                             <source loading=lazy srcset="build/img/Checkout.webp" type="image/webp">
                             <source loading=lazy srcset="build/img/Checkout.png" type="image/png">
-                            <img loading=lazy src="build/img/Checkout.png" alt="Recipe Blog by Gustavo Omonte Acevedo">
+                            <img loading=lazy src="build/img/Checkout.png" alt="Checkout by Gustavo Omonte Acevedo">
                         </picture>
                     </div>
                     <div class="proyecto-info">
                         <p><span>#HTML</span><span>#CSS</span><span>#responsive</span></p>
                         <h2>Checkout</h2>
-                        <p>In this proyecto, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io.</p>
+                        <p>In this project, I worked with HTML and CSS to create a responsive page. The design is from devchallenges.io.</p>
                         <div class="proyecto-buttons">
                             <a href="https://devchallenges6.netlify.app/" rel="noopener" target="_blank"><button translate="no">Demo</button></a>
                             <a href="https://github.com/GustavoOmonteAcevedoGOA/Devchallenges6" rel="noopener" target="_blank"><button translate="no">Code</button></a>
@@ -190,7 +267,7 @@
                     <div class="proyecto-info">
                         <p><span>#HTML</span><span>#CSS</span><span>#JS</span><span>#responsive</span></p>
                         <h2>Courses</h2>
-                        <p>In this proyecto, I work with HTML, CSS and JS to create a responsive page </p>
+                        <p>In this project, I worked with HTML, CSS and JavaScript to create a responsive page.</p>
                         <div class="proyecto-buttons">
                             <a href="https://sitecourses.netlify.app/" rel="noopener" target="_blank"><button translate="no" >Demo</button></a>
                             <a href="https://github.com/GustavoOmonteAcevedoGOA/plantilla3" rel="noopener" target="_blank"><button translate="no" >Code</button></a>
@@ -209,7 +286,7 @@
                     <div class="proyecto-info">
                         <p><span>#HTML</span><span>#CSS</span><span>#JS</span><span>#responsive</span></p>
                         <h2>Events Service</h2>
-                        <p>In this proyecto, I work with HTML, CSS and JS to create a responsive page </p>
+                        <p>In this project, I worked with HTML, CSS and JavaScript to create a responsive page.</p>
                         <div class="proyecto-buttons">
                             <a href="https://eventsservice.netlify.app/" rel="noopener" target="_blank"><button translate="no" >Demo</button></a>
                             <a href="https://github.com/GustavoOmonteAcevedoGOA/plantilla2" rel="noopener" target="_blank"><button translate="no" >Code</button></a>
@@ -230,7 +307,7 @@
                     <div class="proyecto-info">
                         <p><span>#HTML</span><span>#CSS</span><span>#responsive</span></p>
                         <h2>FreeLancer</h2>
-                        <p>In this project, I work with HTML and CSS to create a responsive page .</p>
+                        <p>In this project, I worked with HTML and CSS to create a responsive page.</p>
                         <div class="proyecto-buttons">
                             <a href="https://sitefreelancergoa.netlify.app/" rel="noopener" target="_blank"><button translate="no" >Demo</button></a>
                             <a href="https://github.com/GustavoOmonteAcevedoGOA/plantilla4" rel="noopener" target="_blank"><button translate="no" >Code</button></a>
@@ -249,7 +326,7 @@
                     <div class="proyecto-info">
                         <p><span>#HTML</span><span>#CSS</span><span>#responsive</span></p>
                         <h2>FrontendStore</h2>
-                        <p>In this proyecto, I work with HTML and CSS to create a responsive page .</p>
+                        <p>In this project, I worked with HTML and CSS to create a responsive page .</p>
                         <div class="proyecto-buttons">
                             <a href="https://sitefrontendstore.netlify.app/" rel="noopener" target="_blank"><button translate="no">Demo</button></a>
                             <a href="https://github.com/GustavoOmonteAcevedoGOA/plantilla5" rel="noopener" target="_blank"><button translate="no">Code</button></a>
@@ -268,7 +345,7 @@
                     <div class="proyecto-info">
                         <p><span>#HTML</span><span>#CSS</span><span>#responsive</span></p>
                         <h2>MyGallery</h2>
-                        <p>In this proyecto, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. </p>
+                        <p>In this project, I worked with HTML and CSS to create a responsive page. The design is from devchallenges.io. </p>
                         <div class="proyecto-buttons">
                             <a href="https://devchallenges5.netlify.app/" rel="noopener" target="_blank"><button translate="no" >Demo</button></a>
                             <a href="https://github.com/GustavoOmonteAcevedoGOA/Devchallenges5" rel="noopener" target="_blank"><button translate="no" >Code</button></a>
@@ -287,7 +364,7 @@
                     <div class="proyecto-info">
                         <p><span>#HTML</span><span>#CSS</span><span>#responsive</span></p>
                         <h2>Landing Page</h2>
-                        <p>In this proyecto, I work with HTML and CSS to create a responsive page .</p>
+                        <p>In this project, I worked with HTML and CSS to create a responsive page .</p>
                         <div class="proyecto-buttons">
                             <a href="https://sitelandingpagegoa.netlify.app/" rel="noopener" target="_blank"><button  translate="no" >Demo</button></a>
                             <a href="https://github.com/GustavoOmonteAcevedoGOA/plantilla16" rel="noopener" target="_blank"><button translate="no" >Code</button></a>
@@ -311,11 +388,11 @@
                     <div class="contenedor-campos">
                         <div class="campo">
                             <label for="name">Name</label>
-                            <input class="input-text" type="text" name="name" placeholder="Tu Nombre">
+                            <input class="input-text" type="text" name="name" id="name" placeholder="Your name">
                         </div>                        
                         <div class="campo">
                             <label for="email">Email</label>
-                            <input class="input-text" type="email" name="email" placeholder="Tu Email">
+                            <input class="input-text" type="email" name="email" id="email" placeholder="your@email.com">
                         </div>
                         <div class="campo">
                             <label for="message">Message </label>
@@ -332,7 +409,7 @@
     </section>
     <footer>
         <div class="container">
-          <p>Copyright © 2021 . All rights reserved  <span><a href="https://www.linkedin.com/in/gustavo-omonte-acevedo/" rel="noopener" target="_blank">GOA</a></span></p>
+          <p>Copyright © 2026. All rights reserved  <span><a href="https://www.linkedin.com/in/gustavo-omonte-acevedo/" rel="noopener" target="_blank">GOA</a></span></p>
         </div>
     </footer>
     <script src="build/js/bundle.min.js"></script>
